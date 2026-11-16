@@ -3,7 +3,7 @@
  * The foundations page, read from the tokens themselves: every swatch, size
  * and duration below is a semantic token, shown by its name.
  */
-import { SKnot, SThread } from '@guillaume-flambard/selvage'
+import { SKnot, SThread } from '@memolabs-apps/selvage'
 import semantic from '../../../tokens/semantic.tokens.json'
 
 interface Token {

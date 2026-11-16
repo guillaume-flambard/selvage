@@ -9,7 +9,7 @@
     "test:stories": "playwright test"
   },
   "dependencies": {
-    "@guillaume-flambard/selvage": "workspace:*"
+    "@memolabs-apps/selvage": "workspace:*"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

@@ -2,7 +2,7 @@
 
      @import 'tailwindcss';
      @import '@nuxt/ui';
-     @import '@guillaume-flambard/selvage/selvage.css';
+     @import '@memolabs-apps/selvage/selvage.css';
 
    Everything here reads the generated tokens. Nothing is a literal value
    except the Nuxt UI wiring below, which only points at tokens. */

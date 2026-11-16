@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
 import { fn } from 'storybook/test'
-import { SGate } from '@guillaume-flambard/selvage'
+import { SGate } from '@memolabs-apps/selvage'
 
 const meta = {
   title: 'Components/SGate',

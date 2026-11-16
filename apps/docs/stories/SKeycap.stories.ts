@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
-import { SKeycap } from '@guillaume-flambard/selvage'
+import { SKeycap } from '@memolabs-apps/selvage'
 
 const meta = {
   title: 'Components/SKeycap',

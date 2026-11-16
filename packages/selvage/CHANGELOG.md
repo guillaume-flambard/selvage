@@ -1,4 +1,4 @@
-# @guillaume-flambard/selvage
+# @memolabs-apps/selvage
 
 ## 0.1.0
 

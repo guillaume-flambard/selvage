@@ -214,7 +214,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@guillaume-flambard/selvage':
+      '@memolabs-apps/selvage':
         specifier: workspace:*
         version: link:../../packages/selvage
     devDependencies:

@@ -14,7 +14,7 @@
     "jsx": "preserve",
     "types": ["node", "vite/client"],
     "paths": {
-      "@guillaume-flambard/selvage": ["../../packages/selvage/src/index.ts"]
+      "@memolabs-apps/selvage": ["../../packages/selvage/src/index.ts"]
     }
   },
   "include": ["stories/**/*.ts", "stories/**/*.vue", "src/**/*.ts", ".storybook/*.ts", "tests/**/*.ts", "vite.config.ts", "playwright.config.ts", "auto-imports.d.ts", "components.d.ts"]

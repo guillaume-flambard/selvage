@@ -1,4 +1,4 @@
-# @guillaume-flambard/selvage
+# @memolabs-apps/selvage
 
 Selvage, the design system of the Le fil identity: DTCG tokens, a Nuxt UI 4 theme (`selvage.css`, `selvageUi`) and four Vue 3 components, `SThread`, `SKnot`, `SGate` and `SKeycap`.
 

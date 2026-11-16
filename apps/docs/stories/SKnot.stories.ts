@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite'
-import { SKnot } from '@guillaume-flambard/selvage'
+import { SKnot } from '@memolabs-apps/selvage'
 
 const meta = {
   title: 'Components/SKnot',

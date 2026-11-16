@@ -37,13 +37,13 @@ pnpm changeset        # describe a user-facing change
 /* main.css */
 @import 'tailwindcss';
 @import '@nuxt/ui';
-@import '@guillaume-flambard/selvage/selvage.css';
+@import '@memolabs-apps/selvage/selvage.css';
 ```
 
 ```ts
 // vite.config.ts (Vue). In Nuxt, pass selvageUi as `ui` in app.config.ts.
 import ui from '@nuxt/ui/vite'
-import { selvageUi } from '@guillaume-flambard/selvage'
+import { selvageUi } from '@memolabs-apps/selvage'
 ui({ ui: selvageUi, colorMode: false })
 ```
 
@@ -70,3 +70,5 @@ Run the Hallmark sloplint on the built Storybook and `impeccable detect --json p
 ## Workflow
 
 A prototype for now (régime A): small Conventional Commits straight on `main`, checks in local hooks. Publishing to npm is the owner's decision.
+
+Release, once the owner asks for one: `pnpm changeset version`, commit, then `git tag vX.Y.Z && git push --follow-tags`. `.github/workflows/release.yml` publishes `@memolabs-apps/selvage` from the tag through npm trusted publishing: no npm token exists anywhere, and the tag must equal the package version.

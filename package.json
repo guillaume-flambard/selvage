@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build:tokens": "tz build",
-    "build:package": "pnpm --filter @guillaume-flambard/selvage build",
+    "build:package": "pnpm --filter @memolabs-apps/selvage build",
     "build": "pnpm build:package && pnpm build:tokens && pnpm design:check",
     "design:sync": "node scripts/design-md.mjs --write",
     "design:check": "node scripts/design-md.mjs --check && design.md lint DESIGN.md",
@@ -16,7 +16,7 @@
     "build:storybook": "pnpm --filter selvage-docs build",
     "lint": "oxlint . && eslint .",
     "typecheck": "pnpm -r typecheck",
-    "test": "pnpm --filter @guillaume-flambard/selvage test",
+    "test": "pnpm --filter @memolabs-apps/selvage test",
     "test:stories": "pnpm --filter selvage-docs test:stories",
     "verify": "pnpm lint && pnpm build && pnpm typecheck && pnpm test && pnpm build:storybook && pnpm test:stories",
     "changeset": "changeset",
