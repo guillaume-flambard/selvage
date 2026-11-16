@@ -1,6 +1,6 @@
 {
   "name": "@guillaume-flambard/selvage",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Selvage, the design system of the Le fil identity: DTCG tokens, a Nuxt UI 4 theme and four Vue 3 components.",
   "license": "MIT",
   "author": "Guillaume Flambard",
