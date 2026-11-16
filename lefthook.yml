@@ -1,0 +1,11 @@
+# Régime A: checks run locally, before the push. LEFTHOOK=0 skips them, in an
+# emergency only, and the commit says why.
+pre-commit:
+  jobs:
+    - name: oxlint
+      glob: '*.{js,mjs,ts,vue}'
+      run: pnpm exec oxlint {staged_files}
+pre-push:
+  jobs:
+    - name: verify
+      run: pnpm verify
