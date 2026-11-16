@@ -1,0 +1,42 @@
+{
+  "name": "selvage-monorepo",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.18.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:tokens": "tz build",
+    "build:package": "pnpm --filter @guillaume-flambard/selvage build",
+    "build": "pnpm build:package && pnpm build:tokens && pnpm design:check",
+    "design:sync": "node scripts/design-md.mjs --write",
+    "design:check": "node scripts/design-md.mjs --check && design.md lint DESIGN.md",
+    "storybook": "pnpm --filter selvage-docs storybook",
+    "build:storybook": "pnpm --filter selvage-docs build",
+    "lint": "oxlint . && eslint .",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @guillaume-flambard/selvage test",
+    "test:stories": "pnpm --filter selvage-docs test:stories",
+    "verify": "pnpm lint && pnpm build && pnpm typecheck && pnpm test && pnpm build:storybook && pnpm test:stories",
+    "changeset": "changeset",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@changesets/cli": "3.0.3",
+    "@google/design.md": "0.4.0",
+    "@terrazzo/cli": "2.10.0",
+    "@terrazzo/parser": "2.10.0",
+    "@terrazzo/plugin-css": "2.10.0",
+    "@terrazzo/plugin-tailwind": "2.10.0",
+    "@terrazzo/token-tools": "2.10.0",
+    "@vue/eslint-config-typescript": "14.9.0",
+    "eslint": "10.15.0",
+    "eslint-plugin-vue": "10.12.1",
+    "lefthook": "2.2.2",
+    "oxlint": "1.93.0",
+    "tailwindcss": "4.3.5",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.2"
+  }
+}

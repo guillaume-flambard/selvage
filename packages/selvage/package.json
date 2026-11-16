@@ -1,0 +1,69 @@
+{
+  "name": "@guillaume-flambard/selvage",
+  "version": "0.0.0",
+  "description": "Selvage, the design system of the Le fil identity: DTCG tokens, a Nuxt UI 4 theme and four Vue 3 components.",
+  "license": "MIT",
+  "author": "Guillaume Flambard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guillaume-flambard/selvage.git",
+    "directory": "packages/selvage"
+  },
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "styles"
+  ],
+  "main": "./dist/selvage.js",
+  "module": "./dist/selvage.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/selvage.js"
+    },
+    "./selvage.css": "./styles/selvage.css",
+    "./fonts.css": "./styles/fonts.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./theme.css": "./dist/theme.css",
+    "./components.css": "./dist/selvage.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
+    "typecheck": "vue-tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fontsource/instrument-serif": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/onest": "5.3.1"
+  },
+  "peerDependencies": {
+    "@nuxt/ui": "^4.12.0",
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.0"
+  },
+  "peerDependenciesMeta": {
+    "@nuxt/ui": {
+      "optional": true
+    },
+    "tailwindcss": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@nuxt/ui": "4.12.1",
+    "@vitejs/plugin-vue": "6.0.11",
+    "@vue/test-utils": "2.6.0",
+    "happy-dom": "21.0.4",
+    "typescript": "6.0.3",
+    "vite": "8.3.8",
+    "vitest": "5.1.0",
+    "vue": "3.5.45",
+    "vue-tsc": "3.3.14"
+  }
+}
