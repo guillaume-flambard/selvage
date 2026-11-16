@@ -1,0 +1,51 @@
+{
+  "$description": "Selvage primitives: raw values of the Le fil identity, in OKLCH. Code never reads these directly; it reads the semantic tokens.",
+  "palette": {
+    "$type": "color",
+    "grey": {
+      "$description": "Warm greys (hue 106), the paper.",
+      "100": { "$value": { "colorSpace": "oklch", "components": [1, 0, 0] } },
+      "98": { "$value": { "colorSpace": "oklch", "components": [0.976, 0.003, 106] } },
+      "96": { "$value": { "colorSpace": "oklch", "components": [0.961, 0.003, 106] } },
+      "94": { "$value": { "colorSpace": "oklch", "components": [0.939, 0.004, 106] } },
+      "92": { "$value": { "colorSpace": "oklch", "components": [0.924, 0.005, 107] } },
+      "91": { "$value": { "colorSpace": "oklch", "components": [0.912, 0.005, 107] } },
+      "88": { "$value": { "colorSpace": "oklch", "components": [0.881, 0.007, 107] } }
+    },
+    "slate": {
+      "$description": "Cool greys (hue 264), the ink and its tones.",
+      "86": { "$value": { "colorSpace": "oklch", "components": [0.86, 0.006, 264] } },
+      "70": { "$value": { "colorSpace": "oklch", "components": [0.695, 0.009, 265] } },
+      "51": { "$value": { "colorSpace": "oklch", "components": [0.51, 0.012, 267] } },
+      "43": { "$value": { "colorSpace": "oklch", "components": [0.431, 0.011, 264] } },
+      "33": { "$value": { "colorSpace": "oklch", "components": [0.329, 0.009, 268] } },
+      "29": { "$value": { "colorSpace": "oklch", "components": [0.293, 0.008, 264] } },
+      "21": { "$value": { "colorSpace": "oklch", "components": [0.209, 0.004, 264] } }
+    },
+    "sky": {
+      "96": { "$value": { "colorSpace": "oklch", "components": [0.96, 0.014, 245] } },
+      "91": { "$value": { "colorSpace": "oklch", "components": [0.91, 0.04, 246] } },
+      "63": { "$value": { "colorSpace": "oklch", "components": [0.63, 0.14, 246] } },
+      "51": { "$value": { "colorSpace": "oklch", "components": [0.511, 0.122, 248] } }
+    },
+    "magenta": {
+      "96": { "$value": { "colorSpace": "oklch", "components": [0.957, 0.022, 326] } },
+      "62": { "$value": { "colorSpace": "oklch", "components": [0.619, 0.216, 327] } },
+      "51": { "$value": { "colorSpace": "oklch", "components": [0.514, 0.189, 328] } }
+    },
+    "green": {
+      "96": { "$value": { "colorSpace": "oklch", "components": [0.958, 0.018, 156] } },
+      "62": { "$value": { "colorSpace": "oklch", "components": [0.621, 0.141, 153] } },
+      "50": { "$value": { "colorSpace": "oklch", "components": [0.5, 0.12, 150] } },
+      "49": { "$value": { "colorSpace": "oklch", "components": [0.492, 0.114, 153] } }
+    },
+    "amber": {
+      "96": { "$value": { "colorSpace": "oklch", "components": [0.962, 0.021, 77] } },
+      "70": { "$value": { "colorSpace": "oklch", "components": [0.699, 0.146, 68] } },
+      "50": { "$value": { "colorSpace": "oklch", "components": [0.501, 0.108, 67] } }
+    },
+    "red": {
+      "52": { "$value": { "colorSpace": "oklch", "components": [0.52, 0.19, 27] } }
+    }
+  }
+}

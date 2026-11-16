@@ -1,0 +1,17 @@
+{
+  "name": "Selvage",
+  "version": "2025.10",
+  "description": "DTCG 2025.10 resolver. One theme for now (light); dark is planned as a second context of the same modifier.",
+  "sets": {
+    "base": {
+      "sources": [{ "$ref": "primitives.tokens.json" }, { "$ref": "semantic.tokens.json" }]
+    }
+  },
+  "modifiers": {
+    "theme": {
+      "contexts": { "light": [] },
+      "default": "light"
+    }
+  },
+  "resolutionOrder": [{ "$ref": "#/sets/base" }, { "$ref": "#/modifiers/theme" }]
+}

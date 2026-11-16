@@ -1,0 +1,132 @@
+{
+  "$description": "Selvage semantic tokens: what each value is for. This is the only tier code reads.",
+  "color": {
+    "$type": "color",
+    "ground": { "$value": "{palette.grey.96}", "$description": "The page, warm-grey paper." },
+    "surface": { "$value": "{palette.grey.100}", "$description": "Cards and panels on the ground." },
+    "surface-2": { "$value": "{palette.grey.98}", "$description": "Wells inside a surface: code, JSON, inputs." },
+    "soft": { "$value": "{palette.grey.94}", "$description": "Keycaps, chips and soft controls." },
+    "soft-hover": { "$value": "{palette.grey.91}", "$description": "Soft control on hover." },
+    "line": { "$value": "{palette.grey.92}", "$description": "Hairline rules and borders." },
+    "line-strong": { "$value": "{palette.grey.88}", "$description": "Outlined controls and keycap bottoms." },
+    "ink": { "$value": "{palette.slate.21}", "$description": "Text, and the one action colour: the human." },
+    "ink-hover": { "$value": "{palette.slate.29}", "$description": "Ink control on hover." },
+    "ink-key": { "$value": "{palette.slate.33}", "$description": "A keycap sitting on an ink control." },
+    "ink-2": { "$value": "{palette.slate.43}", "$description": "Secondary text." },
+    "muted": { "$value": "{palette.slate.51}", "$description": "Tertiary text, at least 4.5:1 on ground and surface." },
+    "on-ink": { "$value": "{palette.grey.98}", "$description": "Text on ink." },
+    "on-ink-2": { "$value": "{palette.slate.86}", "$description": "Secondary text on ink." },
+    "select": { "$value": "{palette.sky.91}", "$description": "Text selection." },
+    "error": { "$value": "{palette.red.52}", "$description": "Errors only, never decoration." },
+    "success": { "$value": "{palette.green.50}", "$description": "Success only, never decoration." },
+    "gate": { "$value": "{color.ink}", "$description": "The human gate is the ink: the knot every thread ties into." },
+    "focus": { "$value": "{color.ink}", "$description": "Focus rings." },
+    "thread": {
+      "$description": "One colour per agent. Each thread has a stroke, a text tone at 4.5:1 or better on surface, and a soft tint.",
+      "supervisor": { "$value": "{palette.slate.70}" },
+      "supervisor-text": { "$value": "{palette.slate.43}" },
+      "supervisor-tint": { "$value": "{palette.grey.94}" },
+      "ci": { "$value": "{palette.sky.63}" },
+      "ci-text": { "$value": "{palette.sky.51}" },
+      "ci-tint": { "$value": "{palette.sky.96}" },
+      "deploy": { "$value": "{palette.magenta.62}" },
+      "deploy-text": { "$value": "{palette.magenta.51}" },
+      "deploy-tint": { "$value": "{palette.magenta.96}" },
+      "config": { "$value": "{palette.green.62}" },
+      "config-text": { "$value": "{palette.green.49}" },
+      "config-tint": { "$value": "{palette.green.96}" },
+      "synthesis": { "$value": "{palette.amber.70}" },
+      "synthesis-text": { "$value": "{palette.amber.50}" },
+      "synthesis-tint": { "$value": "{palette.amber.96}" }
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "sans": { "$value": ["Onest", "ui-sans-serif", "system-ui", "sans-serif"], "$description": "Everything by default." },
+    "serif": { "$value": ["Instrument Serif", "ui-serif", "Georgia", "serif"], "$description": "The human voice only: the gate's question, a person's note." },
+    "mono": { "$value": ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"], "$description": "Data only: tool names, arguments, durations, ids." }
+  },
+  "font-weight": {
+    "$type": "fontWeight",
+    "regular": { "$value": 400 },
+    "medium": { "$value": 500 },
+    "semibold": { "$value": 600 }
+  },
+  "text": {
+    "$type": "dimension",
+    "xs": { "$value": { "value": 0.8125, "unit": "rem" } },
+    "sm": { "$value": { "value": 0.875, "unit": "rem" } },
+    "md": { "$value": { "value": 1, "unit": "rem" } },
+    "lg": { "$value": { "value": 1.25, "unit": "rem" } },
+    "xl": { "$value": { "value": 1.5625, "unit": "rem" } },
+    "2xl": { "$value": { "value": 1.953, "unit": "rem" } }
+  },
+  "radius": {
+    "$type": "dimension",
+    "key": { "$value": { "value": 8, "unit": "px" }, "$description": "Keycaps, chips, Nuxt UI's base radius." },
+    "in": { "$value": { "value": 12, "unit": "px" }, "$description": "Inputs and wells inside a card." },
+    "card": { "$value": { "value": 24, "unit": "px" }, "$description": "Cards, panels and the gate." },
+    "pill": { "$value": { "value": 999, "unit": "px" }, "$description": "Buttons." }
+  },
+  "space": {
+    "$type": "dimension",
+    "$description": "A 4px scale. It equals Tailwind's default spacing, so utilities like p-4 already speak it.",
+    "half": { "$value": { "value": 2, "unit": "px" } },
+    "1": { "$value": { "value": 4, "unit": "px" } },
+    "2": { "$value": { "value": 8, "unit": "px" } },
+    "3": { "$value": { "value": 12, "unit": "px" } },
+    "4": { "$value": { "value": 16, "unit": "px" } },
+    "5": { "$value": { "value": 20, "unit": "px" } },
+    "6": { "$value": { "value": 24, "unit": "px" } },
+    "7": { "$value": { "value": 28, "unit": "px" } },
+    "8": { "$value": { "value": 32, "unit": "px" } },
+    "10": { "$value": { "value": 40, "unit": "px" } },
+    "12": { "$value": { "value": 48, "unit": "px" } },
+    "16": { "$value": { "value": 64, "unit": "px" } },
+    "24": { "$value": { "value": 96, "unit": "px" } },
+    "36": { "$value": { "value": 144, "unit": "px" } }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "1": {
+      "$description": "A resting card.",
+      "$value": [
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.05 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 1, "unit": "px" }, "blur": { "value": 2, "unit": "px" }, "spread": { "value": 0, "unit": "px" } },
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.12 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 6, "unit": "px" }, "blur": { "value": 16, "unit": "px" }, "spread": { "value": -8, "unit": "px" } }
+      ]
+    },
+    "2": {
+      "$description": "A raised card, a working agent.",
+      "$value": [
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.04 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 2, "unit": "px" }, "blur": { "value": 4, "unit": "px" }, "spread": { "value": 0, "unit": "px" } },
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.18 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 18, "unit": "px" }, "blur": { "value": 40, "unit": "px" }, "spread": { "value": -18, "unit": "px" } }
+      ]
+    },
+    "3": {
+      "$description": "An overlay.",
+      "$value": [
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.05 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 4, "unit": "px" }, "blur": { "value": 8, "unit": "px" }, "spread": { "value": 0, "unit": "px" } },
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.26 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 28, "unit": "px" }, "blur": { "value": 64, "unit": "px" }, "spread": { "value": -24, "unit": "px" } }
+      ]
+    },
+    "ink": {
+      "$description": "The ink button and the gate node.",
+      "$value": [
+        { "color": { "colorSpace": "oklch", "components": [0.1, 0, 0], "alpha": 0.16 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 1, "unit": "px" }, "blur": { "value": 1, "unit": "px" }, "spread": { "value": 0, "unit": "px" } },
+        { "color": { "colorSpace": "oklch", "components": [0.2, 0.01, 264], "alpha": 0.4 }, "offsetX": { "value": 0, "unit": "px" }, "offsetY": { "value": 6, "unit": "px" }, "blur": { "value": 14, "unit": "px" }, "spread": { "value": -8, "unit": "px" } }
+      ]
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "micro": { "$value": { "value": 120, "unit": "ms" }, "$description": "Press feedback." },
+    "short": { "$value": { "value": 220, "unit": "ms" }, "$description": "Hover and colour changes." },
+    "long": { "$value": { "value": 420, "unit": "ms" }, "$description": "Elevation, the knot tightening." },
+    "flow": { "$value": { "value": 1100, "unit": "ms" }, "$description": "One pass of the dash flowing along a running thread." }
+  },
+  "ease": {
+    "$type": "cubicBezier",
+    "out": { "$value": [0.16, 1, 0.3, 1], "$description": "Things arriving or settling. Nuxt UI reads --ease-out." },
+    "in-out": { "$value": [0.65, 0, 0.35, 1], "$description": "Things moving across. Nuxt UI reads --ease-in-out." }
+  }
+}

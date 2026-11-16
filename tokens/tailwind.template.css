@@ -1,0 +1,5 @@
+/* Template for the Tailwind v4 theme. Terrazzo replaces the @tz rule with
+   the semantic tokens mapped in terrazzo.config.ts. */
+@theme {
+  @tz (theme: "light");
+}
