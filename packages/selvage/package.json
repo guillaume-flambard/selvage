@@ -29,7 +29,7 @@
     "./fonts.css": "./styles/fonts.css",
     "./tokens.css": "./dist/tokens.css",
     "./theme.css": "./dist/theme.css",
-    "./components.css": "./dist/selvage.css",
+    "./components.css": "./dist/components.css",
     "./package.json": "./package.json"
   },
   "scripts": {

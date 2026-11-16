@@ -1,0 +1,63 @@
+/* Selvage for a Nuxt UI 4 app. Import it after Tailwind and Nuxt UI:
+
+     @import 'tailwindcss';
+     @import '@nuxt/ui';
+     @import '@guillaume-flambard/selvage/selvage.css';
+
+   Everything here reads the generated tokens. Nothing is a literal value
+   except the Nuxt UI wiring below, which only points at tokens. */
+@import './fonts.css';
+@import '../dist/tokens.css';
+@import '../dist/theme.css';
+@import '../dist/components.css';
+
+/* Nuxt UI's own variables, mapped onto the tokens. Primary is the ink, the one
+   action colour; neutrals are the warm greys.
+   https://ui.nuxt.com/docs/getting-started/theme/css-variables */
+:root {
+  --ui-primary: var(--color-ink);
+  --ui-error: var(--color-error);
+  --ui-success: var(--color-success);
+  --ui-text-dimmed: var(--color-muted);
+  --ui-text-muted: var(--color-muted);
+  --ui-text-toned: var(--color-ink-2);
+  --ui-text: var(--color-ink);
+  --ui-text-highlighted: var(--color-ink);
+  --ui-text-inverted: var(--color-on-ink);
+  --ui-bg: var(--color-surface);
+  --ui-bg-muted: var(--color-surface-2);
+  --ui-bg-elevated: var(--color-surface-2);
+  --ui-bg-accented: var(--color-soft);
+  --ui-bg-inverted: var(--color-ink);
+  --ui-border: var(--color-line);
+  --ui-border-muted: var(--color-line);
+  --ui-border-accented: var(--color-line-strong);
+  --ui-border-inverted: var(--color-ink);
+  --ui-radius: var(--radius-key);
+}
+
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-select);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

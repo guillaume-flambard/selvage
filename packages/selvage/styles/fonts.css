@@ -1,0 +1,8 @@
+/* The three faces, served by the app itself (no font CDN, so a page policy
+   of font-src 'self' holds). Only the weights the system uses. */
+@import '@fontsource/onest/400.css';
+@import '@fontsource/onest/500.css';
+@import '@fontsource/onest/600.css';
+@import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';

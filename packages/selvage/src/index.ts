@@ -1,0 +1,7 @@
+export { default as SThread } from './components/SThread.vue'
+export { default as SKnot } from './components/SKnot.vue'
+export { default as SGate } from './components/SGate.vue'
+export { default as SKeycap } from './components/SKeycap.vue'
+export { selvageUi, type SelvageUi } from './ui'
+export { THREAD_NAMES, type GateDecision, type ThreadName, type ThreadState } from './types'
+export { gateKeyDecision } from './gate-keys'
