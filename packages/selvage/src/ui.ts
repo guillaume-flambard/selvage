@@ -5,7 +5,9 @@
  * It only restyles what Nuxt UI already draws. Colours come from selvage.css,
  * which points `--ui-primary` at the ink; these classes give the shapes.
  * Slots are merged with Nuxt UI's defaults (tailwind-merge), so a class here
- * replaces only the conflicting default.
+ * replaces only the conflicting default. Radii and shadows are written as
+ * `rounded-(--radius-pill)` rather than `rounded-pill`: tailwind-merge only
+ * knows the first form is a radius, and would otherwise keep both classes.
  * https://ui.nuxt.com/docs/getting-started/theme/components
  */
 export const selvageUi = {
@@ -17,26 +19,38 @@ export const selvageUi = {
   },
   button: {
     slots: {
-      base: 'rounded-pill font-medium',
+      base: 'rounded-(--radius-pill) font-medium',
     },
     defaultVariants: {
       color: 'primary',
       variant: 'solid',
     },
   },
+  // A field's edge is drawn in muted: the default hairline measured 1.28:1
+  // against the page, under the 3:1 a control's boundary needs (WCAG 1.4.11).
   input: {
     slots: {
-      base: 'rounded-in',
+      base: 'rounded-(--radius-in)',
+    },
+    variants: {
+      variant: {
+        outline: 'ring-(--color-muted)',
+      },
     },
   },
   textarea: {
     slots: {
-      base: 'rounded-in',
+      base: 'rounded-(--radius-in)',
+    },
+    variants: {
+      variant: {
+        outline: 'ring-(--color-muted)',
+      },
     },
   },
   badge: {
     slots: {
-      base: 'rounded-key font-medium',
+      base: 'rounded-(--radius-key) font-medium',
     },
     defaultVariants: {
       color: 'neutral',
@@ -45,7 +59,7 @@ export const selvageUi = {
   },
   card: {
     slots: {
-      root: 'rounded-card bg-surface shadow-1 ring-0 divide-line',
+      root: 'rounded-(--radius-card) bg-surface shadow-(--shadow-1) ring-0 divide-line',
     },
   },
 } as const

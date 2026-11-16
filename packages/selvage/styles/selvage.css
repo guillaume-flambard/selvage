@@ -11,6 +11,10 @@
 @import '../dist/theme.css';
 @import '../dist/components.css';
 
+/* The selvageUi classes reach Nuxt UI at runtime, so Tailwind never sees them
+   in the app's own files. The built bundle carries them: scan it. */
+@source '../dist/selvage.js';
+
 /* Nuxt UI's own variables, mapped onto the tokens. Primary is the ink, the one
    action colour; neutrals are the warm greys.
    https://ui.nuxt.com/docs/getting-started/theme/css-variables */
