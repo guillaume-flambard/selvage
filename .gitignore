@@ -8,3 +8,6 @@ test-results/
 .env
 .env.*
 .DS_Store
+.nuxt-ui/
+auto-imports.d.ts
+components.d.ts
