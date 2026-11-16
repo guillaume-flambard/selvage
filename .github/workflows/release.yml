@@ -1,0 +1,38 @@
+# Publishes the package to npm when a v* tag is pushed, with npm trusted
+# publishing: no npm token anywhere, npm trusts this workflow through GitHub's
+# OIDC token (https://docs.npmjs.com/trusted-publishers). An agent releases by
+# bumping the version, committing and pushing the tag; nothing else.
+#
+# One-time setup, already done once per package name:
+#   npm trust github <package> --file release.yml --repo guillaume-flambard/selvage
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+  id-token: write # the OIDC token npm exchanges for a short-lived publish right
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      # Trusted publishing needs npm 11.5.1 or later.
+      - run: npm install -g npm@latest
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Tag matches the package version
+        working-directory: packages/selvage
+        run: test "v$(node -p "require('./package.json').version")" = "$GITHUB_REF_NAME"
+      - name: Publish
+        working-directory: packages/selvage
+        run: npm publish --access public
